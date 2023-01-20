@@ -5,6 +5,6 @@ const songRouter: Router = Router();
 
 songRouter.get("/", listarSong);
 songRouter.post("/", crearSong);
-songRouter.get("/", getIdPlaylist);
+songRouter.get("/:id",getIdPlaylist);
 
 export default songRouter;

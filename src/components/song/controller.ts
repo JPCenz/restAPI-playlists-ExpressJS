@@ -21,6 +21,18 @@ export const listarSong = async (req: Request, res: Response): Promise<void> => 
     }
 };
 
+export const getIdPlaylist =async (req:Request,res:Response): Promise<void> =>{
+    const playlistId = Number(req.params.id);
+    const playli = await prisma.playlist.findFirst({
+        where:{ id:playlistId }
+    })
+    if (playli)
+        res.status(200).json({ playlist:playli });
+    else
+        res.status(400).json({messaje:"no existe tu playlist"});
+}
+playlistRouter.post("/:id",getIdPlaylist);
+
 
 export const crearSong = async (req: Request, res: Response): Promise<void> => {
     try {

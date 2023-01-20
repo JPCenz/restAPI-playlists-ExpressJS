@@ -7,7 +7,7 @@ app.use(express.json());
 
 //Rutas de la API
 app.use("/api/v1/users", userRouter);
-app.use("/api/v1/songs", songRouter)
+app.use("/api/v1/songs", songRouter);
 
 
 

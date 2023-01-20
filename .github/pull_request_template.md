@@ -17,14 +17,57 @@ Please delete options that are not relevant.
 ---
 ## How Has This Been Tested?
 
+- Ruta para login de usurario: (http://localhost:9001/api/v1/users/login)
 
-- Creación de usuarios en la ruta : [http:localhost:9001/api/v1/users](http:localhost:9001/api/v1/users)
+```ts
+{
+    "email": "email@gmail.com",
+    "password": "password"
+}
+```
 
-- Creación de Canciones en la ruta: [http:localhost:9001/api/v1/songs](http:localhost:9001/api/v1/songs)
+- Creación de usuarios en la ruta : (http://localhost:9001/api/v1/users)
 
-- Creación de Playlist en la ruta: [http:localhost:9001/api/v1/playlist](http:localhost:9001/api/v1/playlist)
+```ts
+{
+    "email": "email@gmail.com",
+    "password":"password",
+    "name":"namw",
+    "date_born": "12/12/2000"
+}
+```
 
-- Ruta para login de usurario:
-[http:localhost:9001/api/v1/users/login](http:localhost:9001/api/v1/users/login)
+- Creación de Canciones en la ruta: (http://localhost:9001/api/v1/songs)
 
----
+```ts
+{
+    "id": 1,
+    "name": "Canción 1",
+    "artist": "Artista 1",
+    "album": "Album 1",
+    "year": 2000,
+    "gender": "Rock",
+    "duration": 120
+}
+```
+
+- Creación de Playlist en la ruta: (http://localhost:9001/api/v1/playlist)
+
+```ts
+{
+  "id": 1,
+  "name": "Playlist 1",
+  "user_id": 1,
+  "songs": [
+    {
+      "id": 1,
+      "name": "Canción 1",
+      "artist": "Artista 1",
+      "album": "Album 1",
+      "year": 2020,
+      "genre": "Rock",
+      "duration": 120
+    }
+  ]
+}
+```

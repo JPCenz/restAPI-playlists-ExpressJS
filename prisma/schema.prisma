@@ -39,6 +39,7 @@ model Song {
   year        Int 
   genre       String
   duration    Int
+  is_public   Boolean @default(true)
   updated_at  DateTime? @updatedAt
   playlists Playlist[]
   @@map("songs")

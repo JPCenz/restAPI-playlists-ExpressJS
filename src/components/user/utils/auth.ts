@@ -27,5 +27,14 @@ export function verifyJwt(token:string) {
     } catch (error) {
         return null
     }
-    
+
 }
+
+export function getBearerToken(authHeader: string) {
+    if(!authHeader && authHeader.split('')[1]){
+        return ""
+    };
+    
+    const token : string = authHeader?.split(' ')[1] ?? "";
+    return token;
+};

@@ -1,9 +1,9 @@
 import { Router } from "express";
-import { listarSong, crearSong, getIdSong } from "./controller";
+import { listarSong, crearSong, getIdSong, listarSongPrivate } from "./controller";
 
 const songRouter: Router = Router();
 
-songRouter.get("/", listarSong);
+songRouter.get("/", listarSongPrivate, listarSong);
 songRouter.post("/", crearSong);
 songRouter.get("/:id",getIdSong);
 

@@ -1,5 +1,5 @@
 import express, { type Application } from "express";
-import { userRouter, songRouter } from "./components";
+import { userRouter, songRouter , playlistRouter , agregarRouter } from "./components";
 
 const app: Application = express();
 //Middleware
@@ -8,6 +8,8 @@ app.use(express.json());
 //Rutas de la API
 app.use("/api/v1/users", userRouter);
 app.use("/api/v1/songs", songRouter);
+app.use("/api/v1/playlists", playlistRouter);
+app.use("/api/v1/agregar", agregarRouter);
 
 
 

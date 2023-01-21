@@ -149,3 +149,4 @@ dist
 
 dev.db
 *.db
+prisma/dev.db

@@ -9,7 +9,7 @@ app.use(express.json());
 app.use("/api/v1/users", userRouter);
 app.use("/api/v1/songs", songRouter);
 app.use("/api/v1/playlists", playlistRouter);
-app.use("/api/v1/agregar", agregarRouter);
+app.use("/api/v1/song-playlist", agregarRouter);
 
 
 

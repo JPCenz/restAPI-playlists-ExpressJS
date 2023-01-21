@@ -27,7 +27,7 @@ export const getIdSong =async (req:Request,res:Response): Promise<void> =>{
         where:{ id:songId }
     })
     if (songs)
-        res.status(200).json({ song:songs });
+        res.status(200).json(songs);
     else
         res.status(400).json({messaje:"No existe song"});
 }
@@ -60,3 +60,4 @@ export const crearSong = async (req: Request, res: Response): Promise<void> => {
         })
     }
 };
+

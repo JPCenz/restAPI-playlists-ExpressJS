@@ -28,7 +28,7 @@ model Playlist{
   name     String
   user     User     @relation(fields: [user_id], references: [id])
   user_id  Int
-  songs Song[]
+  songs Song[]    
   @@map("playlists")
 }
 model Song {
